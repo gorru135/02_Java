@@ -1,0 +1,27 @@
+웹 개발시 규칙 
+
+1. 최소 3레벨 이상 지어야함 
+
+레벨이란? 자바에서는 레벨이 폴더 
+
+JavaTest(파스칼케이스)
+
+변수는 9개 
+
+논리형 boolean 1byte
+
+문자형 char 2byte 
+
+byte 
+
+short 
+
+int 
+
+long 
+
+float 
+
+double 
+
+string 
