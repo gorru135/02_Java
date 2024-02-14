@@ -4,9 +4,13 @@ import com.kh.practice.snack.model.vo.Snack;
 
 public class SnackController {
 
-	Snack mb = new Snack();
 	
+	public void saveData() {
+		
+	}
 	
-	
+	public String confirmData() {
+		
+	}
 	
 }

@@ -8,6 +8,11 @@ public class Snack {
 	private int numOf; // 개수
 	private	int price; // 가격
 	
+	public String information() {
+		return "종류 : "+kind+ "이름 : " +name+ 
+				"맛 : " +flavor+ "개수 : "+numOf+ "가격"+price;
+	}
+	
 	public String getKind() {
 		return kind;
 	}
@@ -44,7 +49,8 @@ public class Snack {
 		
 	}
 	
-	public Snack(String kind, String name, String flavor, int numOf, int price) {
+	public Snack(String kind, String name, 
+			String flavor, int numOf, int price) {
 		
 		this.kind = kind;
 		this.name = name;
