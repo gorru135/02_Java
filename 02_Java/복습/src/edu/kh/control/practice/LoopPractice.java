@@ -74,22 +74,37 @@ public class LoopPractice {
 		System.out.print("두 번째 숫자 : ");
 		int second = sc.nextInt();
 		
-		if((first < 1) && (second < 1 )) {
-			System.out.println("1 이상의 숫자 입력");
+		if((first < 1) && (second < 1)) {
+			System.out.print("1 이상의 숫자를 입력해주세요");
 			
 		} else {
-			int num1= first;
-			int num2= second;
+			int sum1 = first;
+			int sum2 = second;
 			
-			if( num1 > num2) {
+			if(sum1 > sum2) {
 				
-				first = num2;
-				second = num1;
+				first = sum2;
+				second = sum1;
+
 			}
-			
-			for(int i = first; i<= second; i++) {
+			for(int i = first; i<=second; i++) {
 				System.out.print(i + " ");
 			}
 		}
 	}
+
+	public void practice5() {
+		
+		System.out.print("1이상의 숫자를 입력하세요 : ");
+		
+		int number = sc.nextInt();
+		
+		for(int i = 1; i<=number; i++) {
+			System.out.print(i + " ");
+			
+		}
+	}
+
 }
+
+

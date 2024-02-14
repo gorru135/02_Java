@@ -6,7 +6,7 @@ public class Run2 {
 		
 		LoopPractice lp = new LoopPractice();
 		
-		lp.practice4();
+		lp.practice1();
 		
 	}
 }

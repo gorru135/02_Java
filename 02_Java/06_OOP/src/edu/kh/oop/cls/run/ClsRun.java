@@ -15,7 +15,7 @@ public class ClsRun {
 		// 클래스 내부에 생성자가 하나도없다면 
 		// 자동으로 기본생성자를 추가해줌(우리 눈 에는안버임
 		
-		service.ex4();
+		service.ex3();
 		
 		
 		

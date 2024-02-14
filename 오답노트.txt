@@ -1,0 +1,51 @@
+멍청이가 쓴거 
+
+while(true) {
+
+system.out.print("2~9 사이 정수 입력 : ");
+
+int input = sc.next(); : next는 String형이기 때문에 nextInt();가 들어가여야 한다. 
+
+break; : 브레이크가 여기에 있을 경우 아래 코드 자체가 실행이 안된다. for문이 끝나는 위치에 들어가야 구구단 코드가 작동이 된다.
+
+if(input >= 2 || input <= 9) { : || 을 사용할경우 한경우만 true여도 출력이 되기 때문에 else에 2이상 9이하의 정수 외에 숫자를 입력해도 출력이 된다.   
+			 그래서 2이상 9이하의 값인 &&을 사용하여야 한다.  										
+for (int num=1 ; num <=9; num ++) {
+
+input += num; : input += num을 하게 될 경우 +1이 되어 버리게 되서 사용하면 안된다. 해당 구구단에는 존재하면 안된다
+		       (a * 3 a 부분이 계속 증가 하게된다...) 	
+	system.out.print("%d * %d =%d\n",input,num, input * num);
+}​
+
+}else { 
+
+system.out.println("2이상 9이하의 정수만 입력하세요.");
+
+}
+
+}
+
+=============================================================
+
+올바른 답안 
+
+
+while(true) {
+
+system.out.print("2~9 사이 정수 입력 : ");
+
+int input = sc.nextInt();
+
+if(input >= 2 && input <= 9) 										
+for (int num=1 ; num <=9; num ++) {
+
+	system.out.print("%d * %d =%d\n",input,num, input * num);
+}​
+break;
+}else { 
+
+system.out.println("2이상 9이하의 정수만 입력하세요.");
+
+}
+
+}
