@@ -9,7 +9,9 @@ public class Member {
 	private char gender;
 	private String email;
 	
-	public String informaition() {}
+	public String informaition() {
+		return "";
+	}
 	
 	public Member() {}
 

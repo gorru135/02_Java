@@ -1,6 +1,6 @@
 1. sc.nextInt = next;가 되어야 함 
 2. < 으로 바꿔야함    
-3. i = 1 = 0이어야함 
+3. i = 1 = 0이어야하고 <= = <으로 변환  
 4. if (fruits[i]).equals(searchName)
 5. 
 

@@ -1,0 +1,21 @@
+상속 : 부모로부터 자식이 물려받음
+부모객체,자식객체
+
+부모가 가진(속성 + 기능) ->자식(자기만의속성 +기능) + 부모가 가진 속성 + 기능
+
+
+상속실습 문제2번
+# protected 접근제한자로 생성
+
+
+public Employee(String name, int age, double height, double weight) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+	}
+
+emps[0] = new Employee("박보검",26,180.3,72.0,100000000,"영업부");
+emps[1] = new Employee("강동원",38,182.0,76.0,200000000,"기획부");
+		

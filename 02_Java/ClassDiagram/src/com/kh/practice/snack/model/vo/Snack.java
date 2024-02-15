@@ -1,18 +1,26 @@
 package com.kh.practice.snack.model.vo;
 
 public class Snack {
-
-	private String kind; // 종류
-	private String name; // 이름
-	private String flavor; // 맛
-	private int numOf; // 개수
-	private	int price; // 가격
+	// 필드
+	private String kind;
+	private String name;
+	private String flavor;
+	private int numOf;
+	private int price;
 	
-	public String information() {
-		return "종류 : "+kind+ "이름 : " +name+ 
-				"맛 : " +flavor+ "개수 : "+numOf+ "가격"+price;
+	public Snack() {} // 기본생성자
+	
+	// 매개변수 생성자
+	public Snack(String kind, String name, String flavor, int numOf, int price) {
+		super();
+		this.kind = kind;
+		this.name = name;
+		this.flavor = flavor;
+		this.numOf = numOf;
+		this.price = price;
 	}
 	
+	// getter/setter
 	public String getKind() {
 		return kind;
 	}
@@ -44,22 +52,8 @@ public class Snack {
 		this.price = price;
 	}
 	
-	public Snack() {
-
-		
+	public String infomation() {
+		return kind +"(" + name + " - " + flavor +  ") " + numOf +"개 " + price+"원";
 	}
-	
-	public Snack(String kind, String name, 
-			String flavor, int numOf, int price) {
-		
-		this.kind = kind;
-		this.name = name;
-		this.flavor = flavor;
-		this.numOf = numOf;
-		this.price = price;
-		
-	}
-	
-	
 	
 }
