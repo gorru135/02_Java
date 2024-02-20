@@ -5,15 +5,23 @@ import com.hw2.model.dto.Prisoner;
 
 public class Prison implements ManagementSystem{
 
-	private int prisonerCount;
-	private Prisoner[] ps = new Prisoner[prisonerCount];
+	@Override
+	public void addPerson(Person person) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removePerson(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayAllPersons() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
-	
-	public Prison(int size) {}
-	
-	public void addPerson(Person person) {}
-	
-	public void removePerson(String id) {}
-	
-	public void displayAllPersons() {}
 }

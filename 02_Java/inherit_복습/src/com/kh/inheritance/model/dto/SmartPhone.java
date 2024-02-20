@@ -32,8 +32,9 @@ public class SmartPhone extends Phone{
 	@Override
 	public void printlninfo() {
 		
-		System.out.println("Operating System : ");
-		System.out.println("Storage Capacity : ");
+		super.printlninfo();
+		System.out.println("Operating System : "+ operatingSystem);
+		System.out.println("Storage Capacity : "+ storageCapacity + "GB" );
 		
 	}
 }

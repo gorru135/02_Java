@@ -2,26 +2,29 @@ package com.hw2.model.dto;
 
 public class Prisoner extends Person{
 
-	private String crime;
+	private String position;
 
-	public Prisoner(String id, String name, String crime) {
+	public Prisoner(String id, String name, String position) {
 		super(id, name);
-		this.crime = crime;
+		this.position = position;
+	}
+	
+	
+	public String getPosition() {
+		return position;
 	}
 
-	public String getCrime() {
-		return crime;
+
+	public void setPosition(String position) {
+		this.position = position;
 	}
 
-	public void setCrime(String crime) {
-		this.crime = crime;
-	}
 
 	@Override
-	public String getInfo(String id,String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getInfo() {
+		return String.format("ID : %s , 이름 : %s , 죄목 : %s",id, name, position);
 	}
-	
-	
 }
+	
+	
+

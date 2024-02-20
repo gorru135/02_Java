@@ -1,0 +1,22 @@
+컬렉션 : 자바에서 제공하는 자료구조 모음
+
+컬렉션
+List / Set / Map 
+=> 배열보다 진화된 형태, 여러 데이터를 관리하기 위함. 
+
+
+Wrapper Class 
+기본 자료형을 객체 형태로 업그레이드 
+
+Wrapper Class 8가지 
+Boolean, Byte, Short, Long, Float, Double (앞에 대문자를 붙힌다.)
+
+Integer(int), Character(char) 
+
+
+* ★★★List(나열/목록) - 기본적으로 배열 모양을 가짐 (중복이 가능)
+
+* set(집합) - 주머니 모양의 집합 (중복이 불가능[중복제거기능때문에] )
+
+* ★★★map(출석부) - key(key는 중복 불가능) : value(value값은 중복 가능) 
+

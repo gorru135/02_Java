@@ -9,24 +9,19 @@ public class OpAssist {
 	
 	public void ex1() {
 		
-		arr[] emp = null;
-		
-		int employeeCount = sc.nextInt();
-		
-		if(employeeCount == 0) {
-			
-			for(int i = employeeCount; i< emp.length; i++) {
-				
-				employeeCount++;
-				System.out.println("직원이 추가되었습니다.");
-			}
-			
-		} else {
-			
-			System.out.println("인원이 모두 충원 되었습니다");
-		}
-		
-	       				  
+		int n = sc.nextInt();
+		int answer = 0;
+        
+        
+        if(n % 2 ==1) {
+        	
+        	for(int i = 0; i <= n; i++) {
+        		System.out.println(i + "합");
+        	}
+        	
+        }
+        
+       
 	 }
 	}
 
