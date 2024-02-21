@@ -61,7 +61,8 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return age == other.age && gender == other.gender && Objects.equals(name, other.name);
+		return age == other.age && gender == 
+				other.gender && Objects.equals(name, other.name);
 	}
 	
 	// 객체가 같다(동일, 동등)를 어떻게 비교할까?

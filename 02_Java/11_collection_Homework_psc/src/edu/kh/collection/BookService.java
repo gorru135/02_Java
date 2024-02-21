@@ -135,11 +135,9 @@ public class BookService {
 			
 			System.out.println("음수는 입력할수 없습니다");
 			
-		} else if(input >= ) {
+		}
 			
-			System.out.println("범위를 넘었습니다.");
-			
-		} else {
+		 else {
 			
 			int menuNum = 0;
 			
@@ -156,7 +154,7 @@ public class BookService {
 				System.out.println("메뉴 선택 : ");
 				
 				switch(menuNum) {
-				case 1 : bk.getTitle(); break;
+				case 1 : book.set(input, bk); break;
 				case 2 : bk.getAuthor(); break;
 				case 3 : bk.getPrice(); break;
 				case 4 : bk.getPublisher();break;
