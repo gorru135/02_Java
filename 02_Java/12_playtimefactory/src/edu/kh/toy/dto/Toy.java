@@ -1,5 +1,6 @@
 package edu.kh.toy.dto;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class Toy implements Comparable<Toy>{
@@ -14,7 +15,8 @@ public class Toy implements Comparable<Toy>{
 	
 	public Toy() {}
 
-	public Toy(String name, int age, int price, String color, int manufacturing,  Set<String> materials) {
+	public Toy(String name, int age, int price, String color, 
+			int manufacturing,  Set<String> materials) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -86,5 +88,24 @@ public class Toy implements Comparable<Toy>{
         // 제조일을 기준으로 비교
         return Integer.compare(this.manufacturing, otherToy.manufacturing);
     }
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, color, manufacturing, materials, name, price);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Toy other = (Toy) obj;
+		return age == other.age && Objects.equals(color, other.color) && manufacturing == other.manufacturing
+				&& Objects.equals(materials, other.materials) && Objects.equals(name, other.name)
+				&& price == other.price;
+	}
 	
 }

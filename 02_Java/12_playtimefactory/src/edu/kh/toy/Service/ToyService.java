@@ -23,6 +23,7 @@ public class ToyService {
 	/**
 	 * 기본 등록된 재료 
 	 * */
+	
 	public void Materials(){
 		map.put(1, "면직물");
 		map.put(2, "플라스틱");
@@ -49,6 +50,7 @@ public class ToyService {
 	}
 
 	public Set<String> addMaterials(Integer... materials) {
+		
 	    Set<String> set = new HashSet<String>();
 	    
 	    for(Integer material : materials) {
@@ -278,6 +280,7 @@ public class ToyService {
 	    boolean removed = false;
 	    for (Iterator<Map.Entry<Integer, String>> iterator = map.entrySet().iterator(); iterator.hasNext();) {
 	        Map.Entry<Integer, String> entry = iterator.next();
+	        
 	        if (entry.getValue().equalsIgnoreCase(str)) {
 	            iterator.remove(); // 해당 재료 제거
 	            removed = true;
