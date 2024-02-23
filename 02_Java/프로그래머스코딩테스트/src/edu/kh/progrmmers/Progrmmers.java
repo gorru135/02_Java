@@ -1,19 +1,27 @@
 package edu.kh.progrmmers;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Progrmmers {
 	
 	public static void main(String[] args) {
-	
 		
-	System.out.println(solution("ProgrammerS123",11));
-	
+		for(int i =1; i<=20; i++) {
+			
+			switch(i % 5) {
+				
+				case 0 : System.out.println(i+ "5의 배수 입니다."); break;
+				default : System.out.println(i+ "5의 배수 입니다."); break;
+			}
+			
+			
+		}
+
 	
 	}
 	
-	
+	/*
 	  public static String solution(String my_string, int n) {
 	        String answer = "";
 	        
@@ -24,7 +32,7 @@ public class Progrmmers {
 	        	 
 	        }
 	        return answer;
-	    }
+	    }*/
 	
 	
 	/*

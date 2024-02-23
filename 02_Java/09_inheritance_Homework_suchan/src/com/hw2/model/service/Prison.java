@@ -10,12 +10,28 @@ public class Prison implements ManagementSystem {
 	private Prisoner[] prisoners;
 	private int prisonerCount ;
 	
-	public void Prison(int size) {
+	public Prison(int size) {
 		this.prisoners = new Prisoner[size];
 		this.prisonerCount = 0;
 	}
 	
-	 @Override
+	 public Prisoner[] getPrisoners() {
+		return prisoners;
+	}
+
+	public void setPrisoners(Prisoner[] prisoners) {
+		this.prisoners = prisoners;
+	}
+
+	public int getPrisonerCount() {
+		return prisonerCount;
+	}
+
+	public void setPrisonerCount(int prisonerCount) {
+		this.prisonerCount = prisonerCount;
+	}
+
+	@Override
 	    public void addPerson(Person person) {
 	        if (person instanceof Prisoner && prisonerCount < prisoners.length) {
 	            prisoners[prisonerCount++] = (Prisoner) person;
