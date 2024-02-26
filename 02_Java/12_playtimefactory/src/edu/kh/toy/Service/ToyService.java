@@ -103,7 +103,7 @@ public class ToyService {
 			}
 			
 			
-		}while(menuNum !=0);
+		} while(menuNum !=0);
 	}
 
 	public void toyAll() {
@@ -227,8 +227,11 @@ public class ToyService {
 		Collections.sort(toy,age);
 		
 		for(Toy t : toy) {
+		
 			System.out.println(t);
 		}
+		
+		
 	}
 	
 	public void materials() {
@@ -290,6 +293,7 @@ public class ToyService {
 	    
 	    if (removed) {
 	        System.out.println("재료 \"" + str + "\"가 성공적으로 제거되었습니다.");
+	        
 	    } else {
 	        System.out.println("해당 이름의 재료가 존재하지 않습니다.");
 	    }

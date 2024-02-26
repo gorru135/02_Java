@@ -4,35 +4,27 @@ package edu.kh.progrmmers;
 import java.util.Scanner;
 
 public class Progrmmers {
-	
-	public static void main(String[] args) {
 		
-		for(int i =1; i<=20; i++) {
-			
-			switch(i % 5) {
-				
-				case 0 : System.out.println(i+ "5의 배수 입니다."); break;
-				default : System.out.println(i+ "5의 배수 입니다."); break;
-			}
-			
-			
-		}
-
-	
-	}
-	
-	/*
-	  public static String solution(String my_string, int n) {
-	        String answer = "";
-	        
-	       
-	        for (int i = 0; i < my_string.length(); i++) {
-	        
-	        		
-	        	 
-	        }
-	        return answer;
-	    }*/
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("입력 : ");
+        
+        String a = sc.next();
+        String sum = "";
+        
+        for (int i = 0; i < a.length(); i++) {
+            char c = a.charAt(i); // 각 문자열에서 문자를 가져옴
+            if (Character.isUpperCase(c)) {
+                sum += Character.toLowerCase(c);
+            } else if (Character.isLowerCase(c)) {
+                sum += Character.toUpperCase(c);
+            } else {
+                sum += c;
+            }
+        }
+        
+        System.out.println("변환된 문자열 : " + sum);
+    }
 	
 	
 	/*

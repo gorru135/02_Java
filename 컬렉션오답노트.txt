@@ -1,0 +1,31 @@
+
+원인2. List<IPInfo> ipInfoList = null; 로 설정을 했기 때문에 아래에 List타입과 같이 써줘야 한다.
+
+틀린 이유
+ArrayList<IpInfo>ipinforList.add(.add(new IPInfo("123.123.123.123","홍길동")));
+위와 같이 할경우에도 nullpointExceprion이 발생 
+
+수정  
+List<IPInfo> ipInfoList = new ArrayList<IPInfo>(); 으로 변경 해줘야 nullpointExceprion이 발생하지 않는다.
+
+
+
+
+원인3. if문에 ip가 문자열 형식이기 때문에 .equals로 비교를 해줘야 한다. ​
+
+
+
+for(IPInfo.get(ip) ipinfo : ipInforList){
+
+if(ipinfo.equals(ip)){
+
+System.out.println(ipinfo)
+
+break;
+
+}
+
+}
+
+
+
