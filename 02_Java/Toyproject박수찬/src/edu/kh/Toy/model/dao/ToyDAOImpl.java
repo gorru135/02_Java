@@ -9,7 +9,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import edu.kh.Toy.model.dto.Toy;
 
@@ -20,7 +24,10 @@ public class ToyDAOImpl implements ToyDAO{
 	private ObjectInputStream ois = null;
 	private ObjectOutputStream oos = null;
 	
+
+	
 	private List<Toy> toyList = null;
+	
 	
 	public ToyDAOImpl() throws FileNotFoundException, IOException, ClassNotFoundException {
 		
@@ -34,6 +41,7 @@ public class ToyDAOImpl implements ToyDAO{
 				toyList = (ArrayList<Toy>)ois.readObject();
 				
 			} finally {
+				
 				if(ois != null)ois.close();
 			}
 			
@@ -94,23 +102,41 @@ public class ToyDAOImpl implements ToyDAO{
 	}
 	
 	@Override
-	public int toyAdd(Toy toy) throws Exception {
-	
+	public Map<String,Object> toyAdd(Toy toy) throws Exception {
+		
+		
 		if(toyList.add(toy)) {
 			
+		
 			saveFile();
 			
-			return toyList.size() -1;
+			int count = 0;
+			for(Toy countToy : toyList) {
+				if(countToy.getName().equals(toy.getName())) {
+					count++;
+					toy.setQuantity(toy.getQuantity());
+					
+					
+				} 
+				
+			}
+					
+			Map<String,Object> toyMap = new HashMap<String,Object >();
+			
+			toyMap.put("toycount",count);
+			toyMap.put("toyList",toyList);
+			
+			return toyMap;
 		}
 		
-		return -1;
+		return null;
+		
 	}
 	
 	@Override
 	public boolean toyComplete(int index) throws Exception {
 		if(index < 0 || index >= toyList.size()) return false;
-		
-		
+				
 		
 		boolean complete = toyList.get(index).isComplete(); 
 		toyList.get(index).setComplete(!complete);
@@ -120,4 +146,50 @@ public class ToyDAOImpl implements ToyDAO{
 		
 		return true;
 	}
+	
+	@Override
+	public boolean toyUpdate(int index, String name, String content) throws Exception{
+		Toy toy = new Toy(name,content,
+				toyList.get(index).isComplete(),
+				toyList.get(index).getRegDate(),
+				toyList.get(index).getQuantity()
+				);
+		if(toyList.set(index, toy) != null) {
+			saveFile();
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public Toy toyDelete(int index) throws Exception {
+	
+		if(index < 0 || index>=toyList.size()) return null;
+		
+		Toy toy = toyList.remove(index);
+		
+		saveFile();
+		return toy;
+	}
+	
+	@Override
+	public boolean checkDuplicateToy(String name)throws Exception {
+		// toyList에서 toy객체 하나씩 꺼내서
+		// toy객체가 가진 이름이 name과 같은게 있는지 검사
+		// 있으면 flag = true
+		// 없으면 flag = false
+		// return falg;
+		
+		boolean flag = true;
+		
+		
+		for(Toy tot : toyList) {
+			
+			if(tot.getName().equals(name)) {
+				flag = false;
+			}
+		}
+		return flag;
+	}
+	
 }

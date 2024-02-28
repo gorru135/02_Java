@@ -22,7 +22,7 @@ public class Run {
 		for(IPInfo ipinfo : ipinfolist) {
 			if(ipinfo.getIp().equals(ip)) {
 				System.out.println(ipinfo);
-				return;
+				;
 			}
 		}
 		System.out.println("일치하는 ip 사용자가 없습니다.");

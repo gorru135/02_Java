@@ -71,6 +71,11 @@ public class Toy implements Serializable {
 				+ ", quantity=" + quantity + "]";
 	}
 
+	public Object setName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	
 }

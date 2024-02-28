@@ -1,0 +1,25 @@
+DB 주요 용어
+
+1 행(row)
+
+2. 컬럼(column)
+
+3. 기본키(primary key) 중복되지 않고 행을 구분하는 키 
+		    (각 행을 구분할 수 있음)
+
+4. 외래키(Foreign Key) 외부에 있는 기본 키 
+
+5. Null(값이없음) 
+
+6. 컬럼값 
+
+▶ SQL
+DQL : 질의어 데이터 검색 SELECT
+
+DML : 데이터 조작어 INSERT(삽입), UPDATE(수정),DELETE(삭제)
+
+DDL : 데이터 정의어 CREATE(생성),DROP(삭제),ALTER(변경/수정)
+
+DCL : 데이터 제어어 GRANT(권한주기),REVOKE(권한삭제)
+
+TCL : 트랜젝션 제어어 COMMIT(),ROLLBACK()

@@ -24,8 +24,10 @@ public class ToyServiceImpl implements ToyService{
 	}
 
 	
-	@Override
+	
 	public Map<String, Object> toyAll() {
+		
+		
 		List<Toy> toyList = dao.toyAll();
 		
 		int completeCount = 0;
@@ -46,7 +48,7 @@ public class ToyServiceImpl implements ToyService{
 	}
 
 
-	@Override
+	
 	public String dateFormat(LocalDateTime regDate) {
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); 
@@ -78,12 +80,12 @@ public class ToyServiceImpl implements ToyService{
 
 
 	@Override
-	public int toyAdd(String name, String content) throws Exception{
+	public Map<String,Object> toyAdd(String name, String content) throws Exception{
 		
 		Toy toy = new Toy(name,content,false,LocalDateTime.now(),0);
-		int index = dao.toyAdd(toy);
+		Map<String,Object> map = dao.toyAdd(toy);
 		
-		return index;
+		return map;
 	}
 	
 	@Override
@@ -91,4 +93,27 @@ public class ToyServiceImpl implements ToyService{
 		
 		 return dao.toyComplete(index);
 	}
+	
+	@Override
+	public boolean toyUpdate(int index, String name, String content) throws Exception{
+		
+		return dao.toyUpdate(index, name, content);
+	}
+	
+	@Override
+	public String toyDelete(int index) throws Exception {
+		
+		Toy toy = dao.toyDelete(index);
+		
+		if(toy == null) return null;
+		
+		return toy.getName();
+	}
+	
+	@Override
+	public boolean checkDuplicateToy(String name) throws Exception{
+		
+		return dao.checkDuplicateToy(name);
+	}
+	
 }

@@ -14,9 +14,21 @@ public interface ToyService {
 
 	String toyDetail(int index);
 
-	int toyAdd(String name, String string)throws Exception;
+	Map<String,Object> toyAdd(String name, String string)throws Exception;
 
 	boolean toyComplete(int index)throws Exception;
+
+	boolean toyUpdate(int index, String name, String string)throws Exception;
+
+	String toyDelete(int index)throws Exception;
+
+	boolean checkDuplicateToy(String name)throws Exception;
+
+
+
+	
+
+	
 
 	
 
